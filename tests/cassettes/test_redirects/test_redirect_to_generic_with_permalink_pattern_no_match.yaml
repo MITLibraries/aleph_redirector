@@ -1,0 +1,44 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.25.1
+    method: GET
+    uri: https://mit.alma.exlibrisgroup.com/view/sru/01MIT_INST?version=1.2&operation=searchRetrieve&recordSchema=dc&query=alma.all_for_ui=asdfasdfasfasdfasdfasdfMIT01
+  response:
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><searchRetrieveResponse
+        xmlns=\"http://www.loc.gov/zing/srw/\">\n  <version>1.2</version>\n  <numberOfRecords>0</numberOfRecords>\n
+        \ <records/>\n  <extraResponseData xmlns:xb=\"http://www.exlibris.com/repository/search/xmlbeans/\">\n
+        \   <xb:exact>true</xb:exact>\n    <xb:responseDate>2021-06-03T14:29:16-0400</xb:responseDate>\n
+        \ </extraResponseData>\n</searchRetrieveResponse>"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '420'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Date:
+      - Thu, 03 Jun 2021 18:29:15 GMT
+      Keep-Alive:
+      - timeout=20
+      Set-Cookie:
+      - JSESSIONID="1E3CFD831C60E2049B4009006A827543.app04.na06.prod.alma.dc01.hosted.exlibrisgroup.com:1801";
+        Version=1; Path=/; HttpOnly; SameSite=None; Secure
+      - urm_st=1622744956097; Path=/; SameSite=None; Secure
+      - urm_se=1622745556097; Path=/; SameSite=None; Secure
+      - X-Persist=a556d7ef198f1c1dd429ddf70584774a;Path=/;SameSite=None;Secure
+      p3p:
+      - CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"
+    status:
+      code: 200
+      message: ''
+version: 1
