@@ -1,16 +1,11 @@
-from flask import request
+import os
 import pytest
 import redirector
 
 
 @pytest.fixture
 def client():
-    redirector.app.config['DEBUG'] = True
-    redirector.app.config['TESTING'] = True
-    redirector.app.config['TARGET_URL'] = 'http://example.com/hallo/'
-    redirector.app.config['ALMA_SRU'] = 'https://mit.alma.exlibrisgroup.com/view/sru/01MIT_INST?version=1.2&operation=searchRetrieve&recordSchema=dc&query=alma.all_for_ui='
-    redirector.app.config['PRIMO_URL'] = 'http://example.com/primo/'
-
+    os.environ['FLASK_ENV'] = 'testing'
     with redirector.app.test_client() as client:
         yield client
 

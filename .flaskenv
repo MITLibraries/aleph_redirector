@@ -7,6 +7,3 @@
 
 FLASK_APP=redirector
 FLASK_ENV=development
-TARGET_URL=https://libraries.mit.edu/news/library-platform-before/32066/
-ALMA_SRU=https://mit.alma.exlibrisgroup.com/view/sru/01MIT_INST?version=1.2&operation=searchRetrieve&recordSchema=dc&query=alma.all_for_ui=
-PRIMO_URL=https://mit.primo.exlibrisgroup.com/discovery/fulldisplay?vid=01MIT_INST:MIT&docid=

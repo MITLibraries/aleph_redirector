@@ -6,10 +6,18 @@ import requests
 from flask import Flask, redirect
 from xml.etree.ElementTree import fromstring, ElementTree
 
-app = Flask(__name__)
-app.config['TARGET_URL'] = os.getenv('TARGET_URL')
-app.config['ALMA_SRU'] = os.getenv('ALMA_SRU')
-app.config['PRIMO_URL'] = os.getenv('PRIMO_URL')
+app = Flask(__name__, instance_relative_config=True)
+
+flask_env = os.getenv('FLASK_ENV')
+
+if flask_env == 'development':
+    app.config.from_object('redirector.config.DevelopmentConfig')
+elif flask_env == 'production':
+    app.config.from_object('redirector.config.Config')
+else:
+    app.config.from_object('redirector.config.TestingConfig')
+
+
 logging.basicConfig(level=logging.INFO)
 
 
