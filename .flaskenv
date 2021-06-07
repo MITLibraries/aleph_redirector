@@ -7,4 +7,3 @@
 
 FLASK_APP=redirector
 FLASK_ENV=development
-TARGET_URL=https://libraries.mit.edu/news/library-platform-before/32066/

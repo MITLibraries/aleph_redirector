@@ -1,0 +1,60 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.25.1
+    method: GET
+    uri: https://mit.alma.exlibrisgroup.com/view/sru/01MIT_INST?version=1.2&operation=searchRetrieve&recordSchema=dc&query=alma.all_for_ui=000095961MIT01
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAJ1WW2/aMBR+76+w8rRKJU5YSwGFTCzt1khQKmBoe5oc55R4DXZkOwX26+ckEC69
+        bAwJ4XP8fefmYx+8T6tFip5BKiZ4z3Jtx0LAqYgZn/esb9MvjbaFlCY8Jqng0LO4sD75ngIiaTIG
+        LRk8wxhUJrgCZGxx1bMSrbMuxsvl0k4FtefiGf829rCSS2z5Zwh5G4e+azc9vBWKDZ4vIpCjxzFQ
+        IWPlux4+VhUwuVvXUiXU4oQmsCB+TD18oDhEPRD6ZELzTeRb3FZ1CLwhuuYapUnlZ0y7Ma1yNos6
+        7SyXqS3kHMcUQwoL4Fph13axtcFW3J7F+KMoBKzKyLBrGI1qvYWuFDso5/JjabnpOC7+PhxUKTUY
+        L06IgmEp1q0sDAQlujzTd9ygV06qOmxTXHNcuSmJErmkoHYke6Via1cKUwxTCM10Cv40AcUU0tUP
+        9nC9cwSngpvWiXItpD8gT3CBJgmkKaztkrO//Q5zSJQiNMkVaK1QaKrAdK4BiUc0BZpwkYr52kY3
+        kBGpi3ModvqmcZkGqnMJf/Wm1xn4Gla6SqWQjhAx0eBTt3PdqYyV8muYAvImIiV8npM5+MDnJahW
+        HJsCRSXLipPdVvvD0J7YM/M9bzT+qSIXRUW0fVyMC7SXxZ6bdyIYhsF49CUM7m5RMHr4gfqzfjjo
+        fx7covAe9cfBXTi7naD+/Q0aj6bB3Um2ZywGUd09cxsR42gsNE3QjKmcpCgQpl1ogVRI8HR9ku1J
+        noF8ZgpiFK3RmNHENDwaAKGCPv3VksqjX8a13zcdk6mN563yCGuS4Jo9MpD+5q4lcWon5oqlYHPQ
+        2L1uFm/D9VW70y4N7THetvVhGAzPHfPpXHVa7v/yhuHUOYFs4JF7ustRIAbBudNqt1vXrct/J34d
+        hJPTMyTpgnSdIrWf4f1kiiMWKdzp1Dk7TceE8bZBD9dPez0B8MsRsJkK4c7Caz5egI6Gj1CsbLAa
+        WmvO9h2XIw/vzTzPvEiSbMduEdd2XkQH4wJWKYskUzYVC8PPCutCrnE1vrHhREC4wpvn3FtFXVgR
+        08Va5uDhWqx35c4l+E2n6TacVsP5OHUvu81O171qOJeOUxIPkGX8L2L2zzz8+h8J/w87erp7lwgA
+        AA==
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Date:
+      - Thu, 03 Jun 2021 18:29:15 GMT
+      Keep-Alive:
+      - timeout=20
+      Set-Cookie:
+      - JSESSIONID="187415C6AED7ECF570890518635DECEB.app01.na06.prod.alma.dc01.hosted.exlibrisgroup.com:1801";
+        Version=1; Path=/; HttpOnly; SameSite=None; Secure
+      - urm_st=1622744954723; Path=/; SameSite=None; Secure
+      - urm_se=1622745554723; Path=/; SameSite=None; Secure
+      - X-Persist=92987b7c60597dcc378c0f98cc32abe8;Path=/;SameSite=None;Secure
+      Transfer-Encoding:
+      - chunked
+      p3p:
+      - CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"
+      vary:
+      - accept-encoding
+    status:
+      code: 200
+      message: ''
+version: 1
