@@ -8,6 +8,7 @@ flask = "*"
 gunicorn = "*"
 requests = "*"
 pytest-recording = "*"
+sentry-sdk = {extras = ["flask"], version = "*"}
 
 [dev-packages]
 flake8 = "*"
