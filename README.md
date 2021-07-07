@@ -37,3 +37,10 @@ Follow above development installation instructions.
 To (re)generate cassettes (cached responses)
 
 `pytest --record-mode=rewrite`
+
+## Environment variables
+
+  `ALMA_SRU`: SRU endpoint for Alma
+  `PRIMO_URL`: base URL to use to construct link to Primo UI
+  `SENTRY_DSN`: set to a valid Sentry DSN to enable exception monitoring
+  `TARGET_URL`: default URL to redirect to if no other match happens

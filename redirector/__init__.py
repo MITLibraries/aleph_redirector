@@ -2,9 +2,17 @@ import logging
 import os
 
 import requests
+import sentry_sdk
 
 from flask import Flask, redirect
 from xml.etree.ElementTree import fromstring, ElementTree
+from sentry_sdk.integrations.flask import FlaskIntegration
+
+if os.getenv('SENTRY_DSN'):
+    sentry_sdk.init(
+        dsn=os.getenv('SENTRY_DSN'),
+        integrations=[FlaskIntegration()],
+    )
 
 app = Flask(__name__, instance_relative_config=True)
 
@@ -72,3 +80,8 @@ def alma_lookup(aleph_id):
         return f'{url}alma{alma_id.text}', code
 
     return url, code
+
+
+@app.route('/debug-sentry')
+def trigger_error():
+    division_by_zero = 1 / 0
