@@ -5,6 +5,9 @@ import requests
 import sentry_sdk
 
 from flask import Flask, redirect
+
+from redirector import primonator
+
 from xml.etree.ElementTree import fromstring, ElementTree
 from sentry_sdk.integrations.flask import FlaskIntegration
 
@@ -15,6 +18,8 @@ if os.getenv('SENTRY_DSN'):
     )
 
 app = Flask(__name__, instance_relative_config=True)
+app.register_blueprint(primonator.bp)
+
 
 flask_env = os.getenv('FLASK_ENV')
 
@@ -38,7 +43,7 @@ def generic_redirect(u_path):
     return redirect(url, code=308)
 
 
-@ app.route('/item/<string:aleph_id>')
+@app.route('/item/<string:aleph_id>')
 # handles aleph permalink syntax http://library.mit.edu/item/001264079
 def redirect_with_bibid(aleph_id):
     url, code = alma_lookup(aleph_id)
